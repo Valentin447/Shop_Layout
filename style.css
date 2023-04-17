@@ -4,6 +4,13 @@ body {
   margin: 0;
 }
 
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
 .header {
   height: 74px;
   background-color: #222;
@@ -11,11 +18,6 @@ body {
 
 .header img {
   height: max-content;
-}
-
-.container{
-  max-width: 1140px;
-  margin: 0 auto;
 }
 
 .header__container {
@@ -26,7 +28,7 @@ body {
 }
 
 .header__left,
-.header__right{
+.header__right {
   box-sizing: border-box;
   display: flex;
   height: max-content;
@@ -34,25 +36,25 @@ body {
   justify-content: space-between;
 }
 
-.header__left{
+.header__left {
   width: 111px;
   margin-left: 16px;
 }
 
-.header__right{
+.header__right {
   margin-right: 24px;
 }
 
-.header__user{
+.header__user {
   display: none;
 }
 
-.header__cart{
+.header__cart {
   position: relative;
   display: none;
 }
 
-.header__cart-count{
+.header__cart-count {
   position: absolute;
   text-align: center;
   background-color: #F16D7F;
@@ -67,13 +69,105 @@ body {
   top: -7px;
 }
 
-@media screen and (min-width: 576px){
-  .header__right{
+/* BRAND */
+
+.brand {
+  display: flex;
+  max-height: 765px;
+}
+
+.brand__left {
+  display: none;
+  position: relative;
+}
+
+.brand__left::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(113, 103, 105, 0.08);
+
+}
+
+.brand__foto {
+  width: 100%;
+  max-width: 800px;
+}
+
+.brand__right {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 363px;
+  background: #F1E4E6;
+  align-items: center;
+}
+
+.brand__heading {
+  border-left: #F16D7F 12px solid;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 16px;
+}
+
+.brand__brand {
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 45px;
+}
+
+.brand__fashion {
+  color: #F16D7F;
+}
+
+
+@media screen and (min-width: 768px) {
+  .header__right {
     width: 169px;
   }
+
   .header__cart,
-  .header__user{
+  .header__user {
     display: block;
+  }
+
+  .brand__left {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+  }
+
+  .brand__right {
+    width: 50%;
+    min-height: 200px;
+    justify-content: left;
+  }
+
+  .brand__heading {
+    margin-left: 64px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .brand__brand {
+    font-size: 44px;
+    line-height: 53px;
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .brand__heading {
+    margin-left: 64px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .brand__brand {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
