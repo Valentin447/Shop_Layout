@@ -126,7 +126,8 @@ body {
 
 /* MENU */
 .nav-wrap {
-  display: flex;
+  display: none;
+  /* display: flex; */
   justify-content: end;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -190,6 +191,63 @@ body {
   color: #F16D7F;
 }
 
+/* OFFER */
+
+.offer {
+  display: grid;
+  grid-template: 80vw 80vw 80vw 33vw/ 100%;
+  grid-gap: 32px;
+  padding: 15px;
+  color: #fff;
+}
+
+.offer h3 {
+  text-align: center;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.offer h3 strong {
+  color: #F16D7F;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.offer section {
+  background-size: cover;
+  position: relative;
+}
+
+.offer__wrap {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.offer__women {
+  background: url(/images/background/women.jpg) no-repeat center;
+}
+
+.offer__men {
+  background: url(/images/background/men.jpg) no-repeat center;
+}
+
+.offer__kids {
+  background: url(/images/background/kids.jpg) no-repeat center;
+}
+
+.offer__accesories {
+  background: url(/images/background/accesories.jpg) no-repeat center;
+}
+
 /* MEDIA */
 
 @media screen and (min-width: 768px) {
@@ -224,6 +282,14 @@ body {
     font-size: 44px;
     line-height: 53px;
   }
+
+  .offer {
+    grid-template: 21.7vw 15vw / 1fr 1fr 1fr;
+  }
+
+  .offer__accesories {
+    grid-column: 1 / -1;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -236,5 +302,9 @@ body {
   .brand__brand {
     font-size: 48px;
     line-height: 58px;
+  }
+
+  .offer {
+    grid-template: 260px 180px / 1fr 1fr 1fr;
   }
 }
