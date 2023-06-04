@@ -17,7 +17,7 @@ ul {
   max-width: 1140px;
   margin: 0 auto;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 8px;
   box-sizing: border-box;
 }
 
@@ -50,11 +50,6 @@ ul {
 
 .header__left {
   width: 111px;
-  margin-left: 16px;
-}
-
-.header__right {
-  margin-right: 24px;
 }
 
 .header__user {
@@ -328,7 +323,7 @@ figure {
   opacity: 0;
 }
 
-.featured-items__cart:hover{
+.featured-items__cart:hover {
   opacity: 1;
 }
 
@@ -604,9 +599,152 @@ figure {
   background-color: #F16D7F;
 }
 
+/* CATALOG */
+/* NEW ARRIVALS */
+.new-arrivals {
+  background: #F8F3F4;
+}
+
+.new-arrivals__breadcrumb {
+  display: inline;
+}
+
+.new-arrivals__container {
+  display: flex;
+  justify-content: space-between;
+  height: 148px;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 24px 0 46px;
+}
+
+.new-arrivals__text {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #F16D7F;
+  text-transform: uppercase;
+}
+
+.new-arrivals__breadcrumb {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.new-arrivals__link {
+  text-decoration: none;
+  color: #636363;
+}
+
+.new-arrivals__link_last {
+  color: #F16D7F;
+  font-weight: 700;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  max-width: 690px;
+}
+
+.filter__text {
+  display: none;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+
+.filter__icon {
+  height: 25px;
+  width: 38px;
+}
+
+.filter__button {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.filter__dropdowns {
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+}
+
+.filter__dropdowns li {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #6F6E6E;
+  margin-left: 28px;
+  display: flex;
+}
+
+.filter__dropdowns li::after {
+  content: url(/images/icons/arrow-down.svg);
+  display: block;
+  margin-left: 10px;
+}
+.pagination{
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid #EBEBEB;
+  border-radius: 3px;
+  align-items: center;
+  margin-bottom: 96px;
+}
+.pagination__button-left,
+.pagination__button-right{
+  padding: 0;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 44px;
+  width: 40px;
+  cursor: pointer;
+}
+.pagination__pages-number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #C4C4C4;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.pagination__pages-number_active{
+  color: #EF5B70;
+}
+
+.pagination__pages-number:first-of-type{
+  margin-left: 0;
+}
+.pagination__pages-number_points{
+  margin-left: 0;
+}
+.pagination__pages-number_points::before{
+  content: ".....";
+}
 /* MEDIA */
 
 @media screen and (min-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
   .header__right {
     width: 169px;
   }
@@ -647,32 +785,55 @@ figure {
     grid-column: 1 / -1;
   }
 
-  .servises__list{
+  .servises__list {
     flex-direction: row;
     padding: 0;
   }
 
-  .servises__item{
+  .servises__item {
     margin: 103px 15px;
   }
+
   .footer__top-backlight {
     padding: 0;
     height: 448px;
   }
-  .footer__top-wrap{
+
+  .footer__top-wrap {
     flex-direction: row;
     justify-content: space-between;
   }
-  .footer__recall{
+
+  .footer__recall {
     margin: 0;
   }
-  .footer__subscribe-header{
+
+  .footer__subscribe-header {
     font-size: 18px;
   }
-  .footer__bottem-wrap{
+
+  .footer__bottem-wrap {
     flex-direction: row;
     height: 79px;
     padding: 0;
+  }
+
+  .new-arrivals__container {
+    flex-direction: row;
+  }
+
+  .filter__text {
+    display: inline;
+  }
+
+  .filter__icon {
+    height: 10px;
+    width: 15px;
+  }
+
+  .filter__dropdowns li {
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 
@@ -692,7 +853,7 @@ figure {
     grid-template: 260px 180px / 1fr 1fr 1fr;
   }
 
-  .container{
+  .container {
     padding: 0;
   }
 }
