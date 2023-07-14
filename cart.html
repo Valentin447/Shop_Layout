@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/style.css">
 </head>
+
 <body class="cart-page">
   <header class="header">
     <div class="header__container container">
@@ -18,16 +21,151 @@
         <img class="header__burger" src="/images/icons/burger.png" alt="Burger">
         <img class="header__user" src="/images/icons/user.png" alt="User">
         <div class="header__cart">
-          <img class="header__cart-icon" src="/images/icons/cart.png" alt="Cart">
+          <img class="header__cart-icon" src="/images/icons/cart.png"
+            alt="Cart">
           <span class="header__cart-count">5</span>
         </div>
       </div>
     </div>
   </header>
-  <div class="shopping-cart">
+  <div class="cart">
+    <div class="cart__caption">
+      <div class="container">
+        <h1 class="cart__text">shopping cart</h1>
+      </div>
+    </div>
     <div class="container">
-      <h3 class="shopping-cart__text">shopping cart</h3>
+      <main class="cart-main">
+        <div class="cart-main__product-list">
+          <div class="cart-item">
+            <figure class="cart-item__wrap">
+              <img class="cart-item__foto" src="/images/product/5.jpg"
+                alt="man">
+              <figcaption class="cart-item__info">
+                <h3 class="cart-item__head">mango people t-shirt</h3>
+                <div class="cart-item__attributes-wrap">
+                  <ul class="cart-item__attributes">
+                    <li>Price: <span class="cart-item__price-text">$<span
+                          class="cart-item__price-number">300</span></span>
+                    </li>
+                    <li>Color: Red</li>
+                    <li>Size: Xl</li>
+                    <li class="cart-item__quantity">Quantity:<div
+                        class="cart-item__quantity-number">2</div>
+                    </li>
+                  </ul>
+                </div>
+              </figcaption>
+            </figure>
+            <div class="cart-item__delete">
+              <svg height="14" width="14">
+                <line stroke="#575757" stroke-width="2" stroke-linecap="round"
+                  x1="1" y1="1" x2="10" y2="10" />
+                <line stroke="#575757" stroke-width="2" stroke-linecap="round"
+                  x1="10" y1="1" x2="1" y2="10" />
+              </svg>
+            </div>
+          </div>
+          <div class="cart-item">
+            <figure class="cart-item__wrap">
+              <img class="cart-item__foto" src="/images/product/7.jpg"
+                alt="man">
+              <figcaption class="cart-item__info">
+                <h3 class="cart-item__head">mango people t-shirt</h3>
+                <div class="cart-item__attributes-wrap">
+                  <ul class="cart-item__attributes">
+                    <li>Price: <span class="cart-item__price-text">$<span
+                          class="cart-item__price-number">300</span></span>
+                    </li>
+                    <li>Color: Red</li>
+                    <li>Size: Xl</li>
+                    <li class="cart-item__quantity">Quantity:<div
+                        class="cart-item__quantity-number">2</div>
+                    </li>
+                  </ul>
+                </div>
+              </figcaption>
+            </figure>
+            <div class="cart-item__delete">
+              <svg height="14" width="14">
+                <line stroke="#575757" stroke-width="2" stroke-linecap="round"
+                  x1="1" y1="1" x2="10" y2="10" />
+                <line stroke="#575757" stroke-width="2" stroke-linecap="round"
+                  x1="10" y1="1" x2="1" y2="10" />
+              </svg>
+            </div>
+          </div>
+          <div class="cart__buttons">
+            <button class="cart__button-clear">Clear shopping cart</button>
+            <button class="cart__button-continue">Continue shopping</button>
+          </div>
+        </div>
+        <form class="cart-form" action="cart-form">
+          <div class="shipping-adress">
+            <h5 class="shipping-adress__heading">Shipping adress</h5>
+            <input class="shipping-adress__country" type="text"
+              placeholder="Bangladesh">
+            <input class="shipping-adress__state" type="text"
+              placeholder="State">
+            <input class="shipping-adress__postcode" type="text"
+              placeholder="Postcode / Zip">
+            <button class="shipping-adress__button-quote">Get a quote</button>
+          </div>
+          <div class="proceed-checkout">
+            <div class="proceed-checkout__wrap">
+              <div class="proceed-checkout__sub-total">
+                <span>Sub total</span>
+                <span class="proceed-checkout__sub-total-number">$900</span>
+              </div>
+              <div class="proceed-checkout__grand-total">
+                <span>Grand total</span>
+                <span class="proceed-checkout__grand-total-text">$900</span>
+              </div>
+
+              <button class="proceed-checkout__button-submit"
+                type="submit">Proceed to checkout</button>
+            </div>
+          </div>
+        </form>
+      </main>
     </div>
   </div>
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__top-backlight">
+        <div class="container">
+          <div class="footer__top-wrap">
+            <div class="footer__recall">
+              <img class="footer__recall-photo" src="/images/avatar/user1.png" alt="photo">
+              <p class="footer__recall-text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <em>a pulvinar
+                  purus
+                  condimentum</em>“</p>
+            </div>
+            <div class="footer__subscribe">
+              <h3 class="footer__subscribe-header"><strong>subscribe</strong><br> for our newletter and promotion</h3>
+              <form class="footer__subscribe-form" action="subscribe">
+                <input class="footer__form-email" type="email" placeholder="Enter Your Email">
+                <input class="footer__form-submit" type="submit" value="Subscribe">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottem">
+      <div class="container">
+        <div class="footer__bottem-wrap">
+          <span class="footer__copy">&copy; 2021 Brand All Rights Reserved.</span>
+          <ul class="footer__social-networks">
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
